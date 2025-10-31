@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Scraper</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/screens.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="navbar-logo">B8</a>
+            <button class="navbar-toggle" aria-label="Toggle navigation" style="display: none;" onclick="app.toggleMobileNav()">☰</button>
+            <div class="navbar-links">
+                <a href="/" class="nav-link" data-route="dashboard">DASHBOARD</a>
+                <a href="/jobs" class="nav-link" data-route="jobs">JOBS</a>
+                <a href="/help" class="nav-link" data-route="help">HELP</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="bosk8" id="main-content">
+        <div class="container" id="app-container">
+            <!-- Content will be rendered here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+

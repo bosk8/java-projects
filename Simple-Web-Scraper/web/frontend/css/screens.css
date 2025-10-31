@@ -1,0 +1,264 @@
+/* Screen-specific Styles */
+
+/* Dashboard */
+.dashboard-hero {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.dashboard-hero h1 {
+  font-size: var(--fs-base);
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.dashboard-hero p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.cta-card {
+  max-width: 600px;
+  margin: 0 auto var(--space-2xl);
+  text-align: center;
+}
+
+.job-list {
+  margin-top: var(--space-xl);
+}
+
+.job-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  border-bottom: var(--border-w) solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.job-item:hover {
+  background-color: var(--bg-elev1);
+}
+
+.job-info {
+  flex: 1;
+}
+
+.job-info .meta {
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.job-info .meta-sm {
+  color: var(--text-subtle);
+}
+
+/* Create Job Form */
+.create-job-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 767px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+.url-input-group {
+  margin-bottom: var(--space-lg);
+}
+
+.url-input-wrapper {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.url-input-wrapper .input {
+  flex: 1;
+}
+
+.add-url-btn {
+  white-space: nowrap;
+}
+
+/* Job Details */
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.config-section {
+  margin-top: var(--space-lg);
+}
+
+.config-item {
+  display: flex;
+  padding: var(--space-sm) 0;
+  border-bottom: var(--border-w) solid var(--border-color);
+}
+
+.config-item:last-child {
+  border-bottom: none;
+}
+
+.config-label {
+  flex: 0 0 150px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.config-value {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--text-subtle);
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.export-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Live Execution */
+.execution-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.url-status-list {
+  margin-top: var(--space-lg);
+}
+
+.url-status-item {
+  padding: var(--space-md);
+  border-bottom: var(--border-w) solid var(--border-color);
+}
+
+.url-status-item:last-child {
+  border-bottom: none;
+}
+
+.url-status-url {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  word-break: break-all;
+}
+
+.log-feed {
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+}
+
+.log-entry {
+  padding: var(--space-xs) 0;
+  border-bottom: var(--border-w) solid var(--border-color);
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-timestamp {
+  color: var(--text-dim);
+  margin-right: var(--space-sm);
+}
+
+.log-message {
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .navbar .container {
+    position: relative;
+  }
+  
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--surface-card);
+    border: var(--border-w) solid var(--border-color);
+    padding: var(--space-sm);
+    min-width: 150px;
+    gap: var(--space-xs);
+    z-index: 200;
+    margin-top: var(--space-xs);
+  }
+  
+  .navbar-links.show {
+    display: flex;
+  }
+  
+  .navbar-toggle {
+    display: block;
+    background: transparent;
+    border: var(--border-w) solid var(--border-color);
+    color: var(--text-muted);
+    padding: var(--space-xs) var(--space-sm);
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-toggle:hover {
+    color: var(--text-primary);
+  }
+  
+  .status-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  
+  .export-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .export-actions .btn {
+    width: 100%;
+  }
+  
+  .data-table {
+    font-size: 0.75rem;
+  }
+  
+  .config-item {
+    flex-direction: column;
+  }
+  
+  .config-label {
+    margin-bottom: var(--space-xs);
+  }
+}
+
